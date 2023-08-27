@@ -31,18 +31,19 @@
     }
     ?>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-md">
-            <a class="navbar-brand" href="#">CRUD Data Mahasiswa</a>
-        </div>
-    </nav>
-    <br>
     <div class="container">
+       
         <?php
         if (!isset($_GET['action']) || ($_GET['action'] != 'edit' && $_GET['action'] != 'add')) {
             ?>
-            <a href="?action=add" class="add-button">Tambah Mahasiswa</a>
-            <br><br>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-md">
+                <a class="navbar-brand" href="#">CRUD Data Mahasiswa</a>
+            </div>
+        </nav>
+
+        <a href="?action=add" class="add-button">Tambah Mahasiswa</a>
+        <br><br>
         <table class="table table-striped">
             <tr>
                 <th>NIM</th>

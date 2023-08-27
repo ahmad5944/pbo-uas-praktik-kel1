@@ -47,9 +47,8 @@
         <a href="?action=add" class="add-button">Tambah Mahasiswa</a>
         <?php
         } elseif($_GET['action'] == 'edit') {
-            $mahasiswaController->tampilFormMahasiswa();
         }else{
-            $mahasiswaController->tampilFormMahasiswa();
+            $mahasiswaController->tampilFormMahasiswaAdd();
         }
         ?>
     </div>

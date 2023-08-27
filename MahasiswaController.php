@@ -34,7 +34,18 @@ class MahasiswaController {
         echo '<input type="text" name="nim" placeholder="NIM" value="' . $nim . '">';
         echo '<input type="text" name="nama" placeholder="Nama" value="' . $nama . '">';
         echo '<input type="hidden" name="id" value="' . ($isEdit && $mahasiswa ? $mahasiswa->id : '') . '">';
-        echo '<input type="submit" name="' . ($isEdit ? 'update' : 'submit') . '" value="' . ($isEdit ? 'Update' : 'Simpan') . '">';
+        echo '<input type="submit" name="update" value="Update">';
+        echo '</form>';
+        echo '</div>';
+    }
+
+    public function tampilFormMahasiswaAdd($mahasiswa = null) {
+        echo '<div class="form-container">';
+        echo '<h2>' . 'Tambah Mahasiswa'. '</h2>';
+        echo '<form method="post">';
+        echo '<input type="text" name="nim" placeholder="NIM" value="">';
+        echo '<input type="text" name="nama" placeholder="Nama" value="">';
+        echo '<input type="submit" name="submit" value="Simpan">';
         echo '</form>';
         echo '</div>';
     }

@@ -18,7 +18,7 @@ class MahasiswaController {
             echo '<tr>';
             echo '<td>' . $row['nim'] . '</td>';
             echo '<td>' . $row['nama'] . '</td>';
-            echo '<td><a href="?action=edit&id=' . $row['id'] . '">Edit</a> | <a href="?action=delete&id=' . $row['id'] . '">Delete</a></td>';
+            echo '<td><a class="btn btn-warning" href="?action=edit&id=' . $row['id'] . '">Edit</a> | <a class="btn btn-danger" href="?action=delete&id=' . $row['id'] . '">Delete</a></td>';
             echo '</tr>';
         }
     }

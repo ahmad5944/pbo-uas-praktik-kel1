@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <title>Aplikasi Mahasiswa CRUD</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <?php
     require_once 'MahasiswaController.php';
 
@@ -29,12 +31,19 @@
     }
     ?>
 
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-md">
+            <a class="navbar-brand" href="#">CRUD Data Mahasiswa</a>
+        </div>
+    </nav>
+    <br>
     <div class="container">
         <?php
         if (!isset($_GET['action']) || ($_GET['action'] != 'edit' && $_GET['action'] != 'add')) {
             ?>
-            <h1>Aplikasi Mahasiswa CRUD</h1>
-        <table>
+            <a href="?action=add" class="add-button">Tambah Mahasiswa</a>
+            <br><br>
+        <table class="table table-striped">
             <tr>
                 <th>NIM</th>
                 <th>Nama</th>
@@ -44,7 +53,6 @@
             $mahasiswaController->tampilDaftarMahasiswa();
             ?>
         </table>
-        <a href="?action=add" class="add-button">Tambah Mahasiswa</a>
         <?php
         } elseif($_GET['action'] == 'edit') {
         }else{
@@ -52,5 +60,7 @@
         }
         ?>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
